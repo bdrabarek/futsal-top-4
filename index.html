@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futsal Top 4 - Portal Ekstraklasy (Bootstrap Edition)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- 1. Silnik stylów: Bootstrap 5 CSS z oficjalnego CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- 2. Nasz autorski arkusz stylów neonowych -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- LAMPIONY W TLE -->
+    <div class="lantern-orb lantern-cyan"></div>
+    <div class="lantern-orb lantern-pink"></div>
+    <div class="particles-overlay"></div>
+
+<!-- PASEK NAWIGACJI (Bootstrap Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary border-opacity-25 py-3 sticky-top" style="background-color: #060913 !important; z-index: 1050; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                ⚽ <span class="neon-cyan">Futsal</span> Top 4
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#futsalNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="futsalNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                    <li class="nav-item"><a class="nav-link" href="https://www.eurobusfutsal.pl/" target="_blank">Eurobus Przemyśl</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ksconstract.pl/" target="_blank">KS Constract Lubawa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://piastgliwice.com/" target="_blank">Piast Gliwice</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://bts.rekord.com.pl/" target="_blank">Rekord Bielsko-Biała</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / BANNER STRONY -->
+    <header class="main-header text-center py-5">
+        <div class="container">
+            <h1 class="page-title display-4 fw-bold">Futsal Top 4</h1>
+            <p class="subtitle lead text-white">Najlepsze kluby polskiej Futsal Ekstraklasy na żywo</p>
+        </div>
+    </header>
+
+    <!-- GŁÓWNA SIATKA DANYCH (GRID SYSTEM: 8 KOLUMN NA TREŚĆ + 4 NA PANEL BOCZNY) -->
+    <div class="container my-4">
+        <div class="row g-4">
+
+            <!-- ================= GŁÓWNA TREŚĆ (8 KOLUMN) ================= -->
+            <main class="col-lg-8 order-2 order-lg-1">
+
+                <!-- 1. KARTY DRUŻYN (SZACHOWNICA W SIATCE ROW-COLS) -->
+                <section class="mb-5">
+                    <h2 class="section-title mb-4">Liderzy Tabeli</h2>
+                    <div class="row g-3">
+                        <!-- Eurobus Przemyśl -->
+                        <div class="col-sm-6">
+                            <a href="https://www.eurobusfutsal.pl/" target="_blank" class="club-card d-block text-decoration-none">
+                                <div class="img-container">
+                                    <img src="foty2/F1.png" alt="Eurobus Przemyśl" class="img-fluid w-100">
+                                </div>
+                                <div class="card-info p-3">
+                                    <h3>Eurobus Przemyśl</h3>
+                                    <span class="badge bg-gold text-dark">1. Miejsce</span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- KS Constract Lubawa -->
+                        <div class="col-sm-6">
+                            <a href="https://ksconstract.pl/" target="_blank" class="club-card d-block text-decoration-none">
+                                <div class="img-container">
+                                    <img src="foty2/f2.jpg" alt="KS Constract Lubawa" class="img-fluid w-100">
+                                </div>
+                                <div class="card-info p-3">
+                                    <h3>KS Constract Lubawa</h3>
+                                    <span class="badge bg-secondary">2. Miejsce</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Piast Gliwice -->
+                        <div class="col-sm-6">
+                            <a href="https://piastgliwice.com/" target="_blank" class="club-card d-block text-decoration-none">
+                                <div class="img-container">
+                                    <img src="foty2/F3.jpg" alt="Piast Gliwice" class="img-fluid w-100">
+                                </div>
+                                <div class="card-info p-3">
+                                    <h3>Piast Gliwice</h3>
+                                    <span class="badge bg-bronze">3. Miejsce</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Rekord Bielsko-Biała -->
+                        <div class="col-sm-6">
+                            <a href="https://bts.rekord.com.pl/" target="_blank" class="club-card d-block text-decoration-none">
+                                <div class="img-container">
+                                    <img src="foty2/F4.webp" alt="Rekord Bielsko-Biała" class="img-fluid w-100">
+                                </div>
+                                <div class="card-info p-3">
+                                    <h3>Rekord Bielsko-Biała</h3>
+                                    <span class="badge bg-dark border">4. Miejsce</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. ARTYKUŁ SEO -->
+                <article class="seo-article p-4 rounded-4 mb-5">
+                    <h2 class="h3 fw-bold mb-3">Futsal Ekstraklasa – Najważniejsze informacje o rozgrywkach</h2>
+                    <p>
+                        Polska Liga Futsalu to emocjonujące rozgrywki na najwyższym poziomie. Czołowe zespoły, takie jak 
+                        <strong>Eurobus Przemyśl</strong> czy <mark class="seo-highlight">KS Constract Lubawa</mark>, regularnie walczą o najwyższe trofea, zapewniając kibicom niezapomniane widowiska sportowe.
+                    </p>
+                    <h3 class="h5 fw-bold mt-3">Dlaczego warto śledzić rozgrywki halowe?</h3>
+                    <p>
+                        Futsal różni się od tradycyjnej piłki nożnej dynamiką, szybkością podejmowania decyzji oraz niewiarygodną techniką zawodników. W małej przestrzeni parkietu każdy błąd może kosztować utratę bramki.
+                    </p>
+                    <blockquote class="seo-quote my-3 ps-3 border-start border-4 border-info">
+                        „Futsal to nie po prostu piłka nożna na hali – to gra czystej precyzji, szybkości myślenia i niesamowitej techniki.”
+                    </blockquote>
+                    <h3 class="h5 fw-bold mt-3">Kluczowe elementy sukcesu w Futsalu:</h3>
+                    <ul class="seo-list text-secondary">
+                        <li>Szybka rotacja zawodników na parkiecie</li>
+                        <li>Perfekcyjne opanowanie piłki o niskim odbiciu</li>
+                        <li>Taktyczne rozegranie stałych fragmentów gry</li>
+                    </ul>
+                </article>
+
+                <!-- 3. TABELA LIGOWA -->
+                <section class="league-table-section mb-5">
+                    <h3 class="table-title h4 fw-bold mb-3">Oficjalna Tabela Futsal Ekstraklasy</h3>
+                    <div class="table-responsive rounded-3 overflow-hidden">
+                        <table class="table table-dark table-hover mb-0 futsal-table">
+                            <thead>
+                                <tr>
+                                    <th>Msc</th>
+                                    <th>Klub</th>
+                                    <th>M</th>
+                                    <th class="highlight-head">PKT</th>
+                                    <th>B+</th>
+                                    <th>B-</th>
+                                    <th>+/-</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="rank-1">
+                                    <td><span class="pos-badge gold">1</span></td>
+                                    <td class="team-name fw-bold">Eurobus Przemyśl</td>
+                                    <td>15</td>
+                                    <td class="pts-cell fw-bold text-info">38</td>
+                                    <td>62</td>
+                                    <td>28</td>
+                                    <td class="diff-plus text-success">+34</td>
+                                </tr>
+                                <tr class="rank-2">
+                                    <td><span class="pos-badge silver">2</span></td>
+                                    <td class="team-name fw-bold">KS Constract Lubawa</td>
+                                    <td>15</td>
+                                    <td class="pts-cell fw-bold text-info">35</td>
+                                    <td>58</td>
+                                    <td>31</td>
+                                    <td class="diff-plus text-success">+27</td>
+                                </tr>
+                                <tr class="rank-3">
+                                    <td><span class="pos-badge bronze">3</span></td>
+                                    <td class="team-name fw-bold">Piast Gliwice</td>
+                                    <td>15</td>
+                                    <td class="pts-cell fw-bold text-info">32</td>
+                                    <td>51</td>
+                                    <td>34</td>
+                                    <td class="diff-plus text-success">+17</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="pos-badge">4</span></td>
+                                    <td class="team-name fw-bold">Rekord Bielsko-Biała</td>
+                                    <td>15</td>
+                                    <td class="pts-cell fw-bold text-info">29</td>
+                                    <td>46</td>
+                                    <td>38</td>
+                                    <td class="diff-plus text-success">+8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+ <!-- 4. GALERIA / SLIDER -->
+                <section class="slider-section mb-5">
+                    <div class="slider-header-text mb-3">
+                        <h2 class="section-title">Galeria &amp; Kulisy Meczu</h2>
+                        <p class="slider-description text-secondary">Przeglądaj najciekawsze ujęcia z parkietów Futsal Ekstraklasy.</p>
+                    </div>
+                    
+                    <div class="slideshow-container position-relative rounded-4 overflow-hidden shadow-lg">
+                        <div class="my-slide" style="display: block;">
+                            <img src="Slider2/slide1.jpg" alt="Piast Gliwice vs Eurobus Przemyśl" onclick="openModal(1)">
+                            <div class="slide-caption">Piast Gliwice vs Eurobus Przemyśl 2026/2027</div>
+                        </div>
+                        <div class="my-slide">
+                            <img src="Slider2/slide2.jpg" alt="Piast Gliwice vs Eurobus Przemyśl" onclick="openModal(2)">
+                            <div class="slide-caption">Piast Gliwice vs Eurobus Przemyśl 2026/2027</div>
+                        </div>
+                        <div class="my-slide">
+                            <img src="Slider2/slide3.jpg" alt="Piast Gliwice vs Eurobus Przemyśl" onclick="openModal(3)">
+                            <div class="slide-caption">Piast Gliwice vs Eurobus Przemyśl 2026/2027</div>
+                        </div>
+                        <div class="my-slide">
+                            <img src="Slider2/slide4.jpg" alt="Piast Gliwice vs Eurobus Przemyśl" onclick="openModal(4)">
+                            <div class="slide-caption">Piast Gliwice vs Eurobus Przemyśl 2026/2027</div>
+                        </div>
+
+                        <a class="prev-btn" onclick="moveSlide(-1)">&#10094;</a>
+                        <a class="next-btn" onclick="moveSlide(1)">&#10095;</a>
+
+                        <div class="dots-container text-center py-2">
+                            <span class="dot active" onclick="setSlide(1)"></span>
+                            <span class="dot" onclick="setSlide(2)"></span>
+                            <span class="dot" onclick="setSlide(3)"></span>
+                            <span class="dot" onclick="setSlide(4)"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. READ MORE -->
+                <section class="read-more-section p-4 rounded-4 mb-5">
+                    <h2 class="section-title mb-3">Dlaczego Futsal to Gra Przyspieszenia?</h2>
+                    <div class="text-content">
+                        <p>
+                            Futsal to nie jest zwykła piłka nożna przeniesiona pod dach. To całkowicie osobny, ekscytujący sport, który wymaga od zawodników błyskawicznego myślenia, absolutnej kontroli nad piłką oraz niesamowitej wydolności fizycznej. Gra na małym boisku i twardym parkiecie sprawia, że każda sekunda zawahania może kosztować utratę bramki.
+                        </p>
+                        <div id="moreText" class="hidden-text">
+                            <p>
+                                Kluczem do sukcesu w Futsal Ekstraklasie są trzy filary: <strong>Szybkość, Technika i Siła</strong>. Szybkość decyzji pozwala ominąć agresywny pressing rywali, perfekcyjna technika umożliwia opanowanie cięższej piłki na małej przestrzeni, a siła i dynamika są niezbędne do wygrywania pojedynków bark w bark przy starciach 1 na 1. To właśnie dlatego futsal jest uznawany za najlepszą szkołę dla najzdolniejszych piłkarzy na świecie.
+                            </p>
+                        </div>
+                        <button id="readMoreBtn" class="btn-read-more" onclick="toggleReadMore()">Poczytaj więcej</button>
+                    </div>
+                </section>
+
+                <!-- 6. FAQ (AKORDEON) -->
+                <section class="faq-section mb-5">
+                    <h2 class="section-title mb-2">Często Zadawane Pytania (Q&amp;A)</h2>
+                    <p class="slider-description text-secondary mb-4">Wszystko, co musisz wiedzieć o rozgrywkach i zasadach Futsal Ekstraklasy.</p>
+
+                    <div class="faq-container d-flex flex-column gap-3">
+                        <div class="faq-item rounded-3">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span>Czym różni się piłka do futsalu od tradycyjnej?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Piłka do futsalu jest mniejsza (rozmiar 4) i posiada specjalne wypełnienie, które znacznie zmniejsza jej kozłowanie (tzw. niski kozioł). Dzięki temu gra jest szybsza i bardziej precyzyjna na twardym parkiecie.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item rounded-3">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span>Ile trwa mecz futsalu i ilu graczy występuje na boisku?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Mecz trwa 2x20 minut czystego czasu gry (zegar zatrzymuje się przy każdym przerwaniu gry). Na parkiecie przebywa po 5 zawodników z każdej drużyny (4 graczy z pola + bramkarz), a liczba zmian jest nieograniczona.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item rounded-3">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span>Czym jest zasada akumulowanych fauli?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Każda drużyna może popełnić maksymalnie 5 fauli w jednej połowie meczu. Od 6. faulu i przy każdym kolejnym, drużyna przeciwna wykonuje przedłużony rzut karny z odległości 10 metrów bez muru!</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item rounded-3">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span>Jak dołączyć do treningów akademii futsalu?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Wystarczy wypełnić nasz formularz rekrutacyjny znajdujący się poniżej! Nasi trenerzy skontaktują się z Tobą i zaproszą Cię na otwarty trening próbny.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. FORMULARZ REKRUTACYJNY -->
+                <section class="join-form-section p-4 rounded-4 mb-5">
+                    <h2 class="h3 fw-bold mb-2">Chcesz zostać futsalistą?</h2>
+                    <p class="text-secondary mb-4">Dołącz do akademii mrocznych talentów. Zostaw swoje dane, a skontaktujemy się z Tobą!</p>
+
+                    <form class="futsal-form" action="#" method="POST">
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="first-name" class="form-label text-light">Imię</label>
+                                <input type="text" id="first-name" name="first_name" class="form-control" placeholder="np. Jan" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="last-name" class="form-label text-light">Nazwisko</label>
+                                <input type="text" id="last-name" name="last_name" class="form-control" placeholder="np. Kowalski" required>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label text-light">Adres E-mail</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="jan.kowalski@example.com" required>
+                        </div>
+                        <button type="submit" class="btn-submit w-100 py-3 rounded-pill fw-bold">Zgłoś się na trening ⚽</button>
+                    </form>
+                </section>
+
+            </main>
+
+            <!-- ================= ASIDE / SIDEBAR (4 KOLUMNY) ================= -->
+            <aside class="col-lg-4 order-1 order-lg-2">
+                
+                <!-- HIT TYGODNIA -->
+                <div class="widget highlight-widget p-4 rounded-4 mb-4">
+                    <span class="badge bg-danger text-uppercase px-3 py-2 mb-2">🔥 HIT TYGODNIA</span>
+                    <h4 class="fw-bold text-white mt-2">Piast Gliwice vs Rekord</h4>
+                    <p class="text-secondary small mb-3">Sobota, godz. 18:00 &bull; Hala Widowiskowa</p>
+                    <button class="btn-ticket w-100 py-2 rounded-pill fw-bold">Kup Bilet</button>
+                </div>
+
+                <!-- AKTUALNOŚCI -->
+                <div class="widget news-widget p-4 rounded-4">
+                    <h4 class="fw-bold text-white mb-3">Aktualności</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                        <li class="border-bottom border-secondary border-opacity-25 pb-2">
+                            <span class="text-info fw-bold">Rekord</span> wzmacnia skład przed zbliżającymi się play-offami.
+                        </li>
+                        <li class="border-bottom border-secondary border-opacity-25 pb-2">
+                            Niesamowita passa zwycięstw <span class="text-info fw-bold">Eurobusu</span> trwa!
+                        </li>
+                        <li>
+                            Kompletne podsumowanie emocjonującej 15. kolejki Futsal Ekstraklasy.
+                        </li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer py-4 border-top border-secondary border-opacity-25 text-center text-secondary">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <p class="mb-0">&copy; 2026 Futsal Top 4 Portal. Wszystkie prawa zastrzeżone.</p>
+            <div class="footer-links d-flex gap-3">
+                <a href="#" class="text-decoration-none text-secondary">Polityka Prywatności</a>
+                <a href="#" class="text-decoration-none text-secondary">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- MODAL PEŁNOEKRANOWY DO GALERII -->
+    <div id="imageModal" class="modal-gallery" style="display: none;">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="modal-content-wrapper">
+            <img class="modal-content-img" id="modalImg" alt="Powiększone zdjęcie">
+            <div id="modalCaption" class="modal-caption"></div>
+            <a class="modal-prev" onclick="moveModalSlide(-1)">&#10094;</a>
+            <a class="modal-next" onclick="moveModalSlide(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <!-- 3. Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- 4. Nasz dedykowany skrypt -->
+    <script src="script.js"></script>
+</body>
+</html>
